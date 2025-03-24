@@ -75,7 +75,7 @@ export default function SignUp() {
     async function createUser(newCustomer) {
 
         console.log(`Adding: ${newCustomer.username}`);
-        await fetch('http://localhost:5000/customer/add', {
+        await fetch('https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/customer/add', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

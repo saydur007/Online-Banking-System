@@ -14,7 +14,7 @@ export default function Login() {
     useEffect(() => {
       if (userId != null) {navigate('/dashboard')}
       async function getCustomers() {
-        const response = await fetch(`http://localhost:5000/customer/`);
+        const response = await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/customer/`);
     
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;

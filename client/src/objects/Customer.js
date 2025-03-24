@@ -62,7 +62,7 @@ export default class Customer {
   async openAccount(type) {
     const data = {accountType: type}
 
-    await fetch(`http://localhost:5000/account/add/${this.id}`, {
+    await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/account/add/${this.id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export default class Customer {
   }
 
   async getAccounts(){
-    return fetch(`http://localhost:5000/account/${this.id}`).then(response => response.json())
+    return fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/account/${this.id}`).then(response => response.json())
     .then((data) => {
         var cAccounts = []
         var sAccounts = []
@@ -99,7 +99,7 @@ export default class Customer {
   }
 
   async updateCustomer() {
-    await fetch(`http://localhost:5000/update/${this.id}`, {
+    await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/update/${this.id}`, {
       method: "POST",
       body: JSON.stringify({
         username: this.username,
@@ -122,7 +122,7 @@ export default class Customer {
   }
 
   async removeCustomer() {
-    await fetch(`http://localhost:5000/remove/${this.id}`, {
+    await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/remove/${this.id}`, {
       method: 'DELETE',
     })
   }

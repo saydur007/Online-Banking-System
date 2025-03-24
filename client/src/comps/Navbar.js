@@ -19,7 +19,7 @@ export default function Navbar() {
   const admin = localStorage.getItem('admin')
 
   function getCustomer() {
-    axios.get(`http://localhost:5000/customer/${userId}`).then(response => {
+    axios.get(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/${userId}`).then(response => {
       setCustomer(response.data)
     })
   }

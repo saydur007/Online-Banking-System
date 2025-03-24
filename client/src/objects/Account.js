@@ -61,7 +61,7 @@ export default class Account {
   async updateAccount() {
     console.log('Update')
     console.log(this.transactionHistory)
-    await fetch(`http://localhost:5000/account/update/${this.id}`, {
+    await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/account/update/${this.id}`, {
       method: "POST",
       body: JSON.stringify({
         accountType: this.accountType,
@@ -77,7 +77,7 @@ export default class Account {
   }
 
   async deleteAccount() {
-    await fetch(`http://localhost:5000/account/remove/${this.id}`)
+    await fetch(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/account/remove/${this.id}`)
   }
 
 }

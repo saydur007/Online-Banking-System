@@ -35,7 +35,7 @@ export default function Edit() {
     }
 
     async function getCustomer() {
-        axios.get(`http://localhost:5000/customer/${userId}`).then((response) => {
+        axios.get(`https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/customer/${userId}`).then((response) => {
         var data = response.data;
         var custObject = new Customer(
             data.username,

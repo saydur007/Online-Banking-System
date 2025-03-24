@@ -29,7 +29,7 @@ export default function LoginForm() {
 
     async function onSubmit(values) {
         
-        return axios.get("http://localhost:5000/customer").then(response => {
+        return axios.get("https://application-84.1te0ve55w7l8.us-east.codeengine.appdomain.cloud/customer").then(response => {
             if (values.username === 'admin' && values.password === 'adminpw') {
                 localStorage.setItem('admin', "true")
                 navigate('/admin');
